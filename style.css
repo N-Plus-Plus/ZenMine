@@ -1,0 +1,130 @@
+:root{
+    --background: #111;
+    --mainDull: #4d4d4d;
+    --mainDull: #424242;
+    --mainBright: #3E2C41;
+    --accentDull: #5C527F;
+    --accentBright: #6E85B2;
+}
+
+body{
+    background-color: var(--background);
+    margin: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    color: #fffC;
+    overflow: hidden;
+}
+
+*,*::before{
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+.topBar{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--mainDull);
+    position: relative;
+    z-index: 1;
+}
+.board{
+    margin: auto auto;
+    background-image: url(./ass/dirt.png);
+    background-repeat: repeat;
+    background-size: 25rem;
+    width: fit-content;
+    background-position: top;
+    transition: transform 5000ms;
+    z-index: -1;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+.tile{ width: 5rem; height: 5rem; position: relative; }
+.stone{ background-image: url(./ass/stone.png);}
+.diamond{ background-image: url(./ass/diamond.png);}
+.emerald{ background-image: url(./ass/emerald.png);}
+.ruby{ background-image: url(./ass/ruby.png);}
+.gold{ background-image: url(./ass/gold.png);}
+.iron{ background-image: url(./ass/iron.png);}
+.coal{ background-image: url(./ass/coal.png);}
+.tile.destroyed{ background: none; }
+.tileObs,.minerCell{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: relative;
+}
+.fow{
+    width: 100%;
+    height: 100%;
+    background-image: url(./ass/fow.png);
+}
+.crack0,.crack1,.crack2,.crack3{
+    width: 80%;
+    height: 80%;
+    filter: brightness(0.25);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    opacity: 0.25;
+}
+.crack0{ background-image: url(./ass/crack0.png);}
+.crack1{ background-image: url(./ass/crack1.png);}
+.crack2{ background-image: url(./ass/crack2.png);}
+.crack3{ background-image: url(./ass/crack3.png);}
+
+.stone-l{ background-image: url(./ass/stone-loose.png);}
+.diamond-l{ background-image: url(./ass/diamond-loose.png);}
+.emerald-l{ background-image: url(./ass/emerald-loose.png);}
+.ruby-l{ background-image: url(./ass/ruby-loose.png);}
+.gold-l{ background-image: url(./ass/gold-loose.png);}
+.iron-l{ background-image: url(./ass/iron-loose.png);}
+.coal-l{ background-image: url(./ass/coal-loose.png);}
+.topBox{
+    height: 5rem;
+    display: flex;
+    margin: 0 1.25rem;
+}
+.topCount{
+    margin-left: 1rem;
+}
+.img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.noDisplay{
+    display: none;
+}
+
+.miner{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background-image: url(./ass/miner.png);
+    background-size: 6rem;
+}
+.miner.walking{
+    background-image: url(./ass/minerWalking.png);
+}
+.miner.falling{
+    background-image: url(./ass/minerFalling.png);
+}
+.right{
+    transform: none;
+}
+.left{
+    transform:scaleX(-1);
+}
